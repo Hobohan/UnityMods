@@ -93,7 +93,8 @@ namespace HRtoVRChat.HRManagers
                 }
                 catch(Exception e)
                 {
-                    LogHelper.Error("FitbitManager", "Failed to connect to Fitbit Server! Exception: " + e);
+                    LogHelper.Warn("FitbitManager", "Failed to connect to Fitbit Server!");
+                    LogHelper.Debug("FitbitManager", "Failed to connect to Fitbit Server! Exception: " + e);
                     noerror = false;
                 }
                 if (noerror)
